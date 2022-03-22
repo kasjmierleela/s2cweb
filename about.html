@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
 
   <link href="css/styles.css" rel="stylesheet">
+  <script src="js/gsap.min.js" defer="defer"></script>
+  <script src="js/lottie.js" defer="defer"></script>
   <script src="js/scripts.js" defer="defer"></script>
 
 </head>
+
 <body>
 
   <section class="nav container">
@@ -22,9 +26,34 @@
         <img src="assets/images/s2c-logo-main.png" alt="safe and sound cities logo" class="nav-logo">
       </a>
       <div class="nav-links-wrapper text-h6">
-        <a href="index.html" class="nav-link-item text-h6">Home</a>
-        <a href="about.html" class="nav-link-item text-h6">About</a>
-        <a href="blog.html" class="nav-link-item text-h6">Blog</a>
+        <div class="nav-links__internal">
+          <a href="index.html" class="nav-link-item text-h6">Home</a>
+          <a href="about.html" class="nav-link-item text-h6">About</a>
+          <a href="blog.html" class="nav-link-item text-h6">Blog</a>
+        </div>
+        <div class="nav-links__social">
+          <a href="#" class="nav-links__social-item">
+            <svg width="100%" height="100%" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.9516 16.7476L15.7808 11.3592H10.5936V7.8625C10.5936 6.38837 11.3182 4.95145 13.6416 4.95145H16V0.364069C16 0.364069 13.8596 0 11.8133 0C7.5411 0 4.74885 2.58057 4.74885 7.25243V11.3592H0V16.7476H4.74885V29.7736C5.7156 29.9245 6.69268 30.0003 7.67123 30C8.66542 30 9.64137 29.9225 10.5936 29.7736V16.7476H14.9516Z"
+                fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" class="nav-links__social-item">
+            <svg width="100%" height="100%" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.9516 16.7476L15.7808 11.3592H10.5936V7.8625C10.5936 6.38837 11.3182 4.95145 13.6416 4.95145H16V0.364069C16 0.364069 13.8596 0 11.8133 0C7.5411 0 4.74885 2.58057 4.74885 7.25243V11.3592H0V16.7476H4.74885V29.7736C5.7156 29.9245 6.69268 30.0003 7.67123 30C8.66542 30 9.64137 29.9225 10.5936 29.7736V16.7476H14.9516Z"
+                fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" class="nav-links__social-item">
+            <svg width="100%" height="100%" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.9516 16.7476L15.7808 11.3592H10.5936V7.8625C10.5936 6.38837 11.3182 4.95145 13.6416 4.95145H16V0.364069C16 0.364069 13.8596 0 11.8133 0C7.5411 0 4.74885 2.58057 4.74885 7.25243V11.3592H0V16.7476H4.74885V29.7736C5.7156 29.9245 6.69268 30.0003 7.67123 30C8.66542 30 9.64137 29.9225 10.5936 29.7736V16.7476H14.9516Z"
+                fill="currentColor" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -42,17 +71,150 @@
 
   <section class="about-acc">
     <div class="container">
+      <div class="about-acc__toggle-area">
+        <div class="about-acc__toggle-wrapper">
+          <div class="about-acc__toggle-ball"></div>
+        </div>
+        <div class="about-acc__toggle-info text-h6-mini">Click to know more</div>
+      </div>
       <div class="about-acc__body">
-        <div class="about-acc__text text-h5">With their unconventional thinking and fresh perspectives, young people have the potential to transform their cities in innovative ways. They are a growing demographic in a rapidly urbanizing world; thus, their voices are important in shaping the future of their urban environments.</div>
-        <div class="about-acc__text text-h5">However, today’s cities are often far from welcoming spaces for their young residents. Young people lack the opportunities and capacities to exercise their right to safety, being rarely empowered to participate in meaningful ways in shaping their cities.  Also, municipal authorities lack capacity in youth engagement and in holistically assessing and addressing urban safety.</div>
-        <div class="about-acc__text text-h5">The S2Cities program aims to empower young people of ages 15-24 in cities to shape safer and more inclusive urban environments. By partnering with strategic advisors, learning partners, and local implementation agencies, the program connects young people to the resources they need to become agents of change in their cities.</div>
+        <div class="about-acc__text text-h5">With their unconventional thinking and fresh perspectives, young people have the potential to transform their cities in innovative ways. They are a growing demographic in a rapidly urbanizing world; thus,
+          their voices are important in shaping the future of their urban environments.</div>
+        <div class="about-acc__text text-h5">However, today’s cities are often far from welcoming spaces for their young residents. Young people lack the opportunities and capacities to exercise their right to safety, being rarely empowered to
+          participate in meaningful ways in shaping their cities. Also, municipal authorities lack capacity in youth engagement and in holistically assessing and addressing urban safety.</div>
+        <div class="about-acc__text text-h5">The S2Cities program aims to empower young people of ages 15-24 in cities to shape safer and more inclusive urban environments. By partnering with strategic advisors, learning partners, and local
+          implementation agencies, the program connects young people to the resources they need to become agents of change in their cities.</div>
       </div>
     </div>
   </section>
 
-  <section class="principles container"></section>
+  <section class="principles container-mini">
+    <div class="principles-intro text-h2">Principles Shaping Our Program</div>
+    <div class="principles-acc__wrapper">
+      <div class="principles-acc__item">
+        <div class="principles-acc__head">
+          <div class="principles-acc__titles">
+            <div class="principles-acc__titles-main text-h3">Urban safety</div>
+            <div class="principles-acc__titles-sub text-h6">(n.) /ˈərbən/ /ˈsāftē/</div>
+          </div>
+          <div class="principles-acc__toggle-wrapper">
+            <div class="principles-acc__toggle-lottie"></div>
+          </div>
+        </div>
+        <div class="principles-acc__body">
+          <div class="principles-acc__divider-wrapper">
+            <div class="principles-acc__divider"></div>
+          </div>
+          <div class="principles-acc__text text-h6">RWB is an integrative approach to understanding wellbeing that looks beyond individual psychology or behaviour and focuses on the underlying processes that promote healthy environments and happy
+            lives. The concept is centred around three interlinked dimensions of wellbeing: material (having enough), relational (being connected), and subjective (feeling good).<br><br>The approach also goes beyond the experience of wellbeing to
+            address the underlying conditions that promote or hinder wellbeing. It targets three forms of underlying drivers of wellbeing: personal (personality and personal history), societal (social norms, economy and culture), and environmental
+            (built environment, climate and ecological sustainability).</div>
+        </div>
+      </div>
+      <div class="principles-acc__item">
+        <div class="principles-acc__head">
+          <div class="principles-acc__titles">
+            <div class="principles-acc__titles-main text-h3">Relational approach to well being (RWB)</div>
+            <div class="principles-acc__titles-sub text-h6">(n.) /rəˈlāSH(ə)n(ə)l/ /ˈˌwel ˈˌbēiNG/</div>
+          </div>
+          <div class="principles-acc__toggle-wrapper">
+            <div class="principles-acc__toggle-lottie"></div>
+          </div>
+        </div>
+        <div class="principles-acc__body">
+          <div class="principles-acc__divider-wrapper">
+            <div class="principles-acc__divider"></div>
+          </div>
+          <div class="principles-acc__text text-h6">RWB is an integrative approach to understanding wellbeing that looks beyond individual psychology or behaviour and focuses on the underlying processes that promote healthy environments and happy
+            lives. The concept is centred around three interlinked dimensions of wellbeing: material (having enough), relational (being connected), and subjective (feeling good).<br><br>The approach also goes beyond the experience of wellbeing to
+            address the underlying conditions that promote or hinder wellbeing. It targets three forms of underlying drivers of wellbeing: personal (personality and personal history), societal (social norms, economy and culture), and environmental
+            (built environment, climate and ecological sustainability).</div>
+        </div>
+      </div>
+      <div class="principles-acc__item">
+        <div class="principles-acc__head">
+          <div class="principles-acc__titles">
+            <div class="principles-acc__titles-main text-h3">Innovation</div>
+            <div class="principles-acc__titles-sub text-h6">(n.) /ˌinəˈvāSH(ə)n/</div>
+          </div>
+          <div class="principles-acc__toggle-wrapper">
+            <div class="principles-acc__toggle-lottie"></div>
+          </div>
+        </div>
+        <div class="principles-acc__body">
+          <div class="principles-acc__divider-wrapper">
+            <div class="principles-acc__divider"></div>
+          </div>
+          <div class="principles-acc__text text-h6">RWB is an integrative approach to understanding wellbeing that looks beyond individual psychology or behaviour and focuses on the underlying processes that promote healthy environments and happy
+            lives. The concept is centred around three interlinked dimensions of wellbeing: material (having enough), relational (being connected), and subjective (feeling good).<br><br>The approach also goes beyond the experience of wellbeing to
+            address the underlying conditions that promote or hinder wellbeing. It targets three forms of underlying drivers of wellbeing: personal (personality and personal history), societal (social norms, economy and culture), and environmental
+            (built environment, climate and ecological sustainability).</div>
+        </div>
+      </div>
+      <div class="principles-acc__item">
+        <div class="principles-acc__head">
+          <div class="principles-acc__titles">
+            <div class="principles-acc__titles-main text-h3">Co-creation</div>
+            <div class="principles-acc__titles-sub text-h6">(n.) /kō’krēˈāSH(ə)n/</div>
+          </div>
+          <div class="principles-acc__toggle-wrapper">
+            <div class="principles-acc__toggle-lottie"></div>
+          </div>
+        </div>
+        <div class="principles-acc__body">
+          <div class="principles-acc__divider-wrapper">
+            <div class="principles-acc__divider"></div>
+          </div>
+          <div class="principles-acc__text text-h6">RWB is an integrative approach to understanding wellbeing that looks beyond individual psychology or behaviour and focuses on the underlying processes that promote healthy environments and happy
+            lives. The concept is centred around three interlinked dimensions of wellbeing: material (having enough), relational (being connected), and subjective (feeling good).<br><br>The approach also goes beyond the experience of wellbeing to
+            address the underlying conditions that promote or hinder wellbeing. It targets three forms of underlying drivers of wellbeing: personal (personality and personal history), societal (social norms, economy and culture), and environmental
+            (built environment, climate and ecological sustainability).</div>
+        </div>
+      </div>
+      <div class="principles-acc__item">
+        <div class="principles-acc__head">
+          <div class="principles-acc__titles">
+            <div class="principles-acc__titles-main text-h3">Placemaking</div>
+            <div class="principles-acc__titles-sub text-h6">(n.,v.) /plāsˈmākiNG/</div>
+          </div>
+          <div class="principles-acc__toggle-wrapper">
+            <div class="principles-acc__toggle-lottie"></div>
+          </div>
+        </div>
+        <div class="principles-acc__body">
+          <div class="principles-acc__divider-wrapper">
+            <div class="principles-acc__divider"></div>
+          </div>
+          <div class="principles-acc__text text-h6">RWB is an integrative approach to understanding wellbeing that looks beyond individual psychology or behaviour and focuses on the underlying processes that promote healthy environments and happy
+            lives. The concept is centred around three interlinked dimensions of wellbeing: material (having enough), relational (being connected), and subjective (feeling good).<br><br>The approach also goes beyond the experience of wellbeing to
+            address the underlying conditions that promote or hinder wellbeing. It targets three forms of underlying drivers of wellbeing: personal (personality and personal history), societal (social norms, economy and culture), and environmental
+            (built environment, climate and ecological sustainability).</div>
+        </div>
+      </div>
+      <div class="principles-acc__item">
+        <div class="principles-acc__head">
+          <div class="principles-acc__titles">
+            <div class="principles-acc__titles-main text-h3">Participatory decision-making</div>
+            <div class="principles-acc__titles-sub text-h6">(n.) /pärˈtisəpəˌtôrē/ /dəˈsiZHənˈmākiNG/</div>
+          </div>
+          <div class="principles-acc__toggle-wrapper">
+            <div class="principles-acc__toggle-lottie"></div>
+          </div>
+        </div>
+        <div class="principles-acc__body">
+          <div class="principles-acc__divider-wrapper">
+            <div class="principles-acc__divider"></div>
+          </div>
+          <div class="principles-acc__text text-h6">RWB is an integrative approach to understanding wellbeing that looks beyond individual psychology or behaviour and focuses on the underlying processes that promote healthy environments and happy
+            lives. The concept is centred around three interlinked dimensions of wellbeing: material (having enough), relational (being connected), and subjective (feeling good).<br><br>The approach also goes beyond the experience of wellbeing to
+            address the underlying conditions that promote or hinder wellbeing. It targets three forms of underlying drivers of wellbeing: personal (personality and personal history), societal (social norms, economy and culture), and environmental
+            (built environment, climate and ecological sustainability).</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section class="ctas container">
+  <section class="ctas container-mini">
     <div class="cta-item cta-yellow">
       <div class="cta-item__info">
         <div class="cta-item__button text-h6">Invest In Our Scaleup</div>
@@ -90,7 +252,8 @@
       <div class="footer-gib__icon-wrapper">
         <img src="assets/images/gib-logo.png" alt="" class="footer-gib__icon">
       </div>
-      <div class="footer-gib__text text-h6-mini">The Safe and Sound Cities Program (S²Cities) is an initiative proudly led by Global Infrastructure Basel Foundation, hosted by Swiss Philanthropy Foundation, and with the support of Fondation Botnar.</div>
+      <div class="footer-gib__text text-h6-mini">The Safe and Sound Cities Program (S²Cities) is an initiative proudly led by Global Infrastructure Basel Foundation, hosted by Swiss Philanthropy Foundation, and with the support of Fondation Botnar.
+      </div>
     </div>
     <div class="footer-main">
       <div class="footer-main-flex container">
@@ -110,13 +273,9 @@
         <div class="footer-main__col">
           <div class="footer-col__title text-h6-mini">Socials</div>
           <div class="footer-col__links">
-            <a href="#" class="footer-col__item text-h6">Instagram</a>
             <a href="#" class="footer-col__item text-h6">LinkedIn</a>
             <a href="#" class="footer-col__item text-h6">Twitter</a>
             <a href="#" class="footer-col__item text-h6">Facebook</a>
-            <a href="#" class="footer-col__item text-h6">Youtube</a>
-            <a href="#" class="footer-col__item text-h6">Reddit</a>
-            <a href="#" class="footer-col__item text-h6">Discord</a>
           </div>
         </div>
         <div class="footer-main__col">
@@ -148,4 +307,5 @@
   </section>
 
 </body>
+
 </html>

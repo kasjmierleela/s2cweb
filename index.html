@@ -12,7 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
 
   <link href="css/styles.css" rel="stylesheet">
+  <script src="js/gsap.min.js" defer="defer"></script>
+  <script src="js/lottie.js" defer="defer"></script>
   <script src="js/scripts.js" defer="defer"></script>
+
 
 </head>
 
@@ -24,9 +27,34 @@
         <img src="assets/images/s2c-logo-main.png" alt="safe and sound cities logo" class="nav-logo">
       </a>
       <div class="nav-links-wrapper text-h6">
-        <a href="index.html" class="nav-link-item text-h6">Home</a>
-        <a href="about.html" class="nav-link-item text-h6">About</a>
-        <a href="blog.html" class="nav-link-item text-h6">Blog</a>
+        <div class="nav-links__internal">
+          <a href="index.html" class="nav-link-item text-h6">Home</a>
+          <a href="about.html" class="nav-link-item text-h6">About</a>
+          <a href="blog.html" class="nav-link-item text-h6">Blog</a>
+        </div>
+        <div class="nav-links__social">
+          <a href="#" class="nav-links__social-item">
+            <svg width="100%" height="100%" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.9516 16.7476L15.7808 11.3592H10.5936V7.8625C10.5936 6.38837 11.3182 4.95145 13.6416 4.95145H16V0.364069C16 0.364069 13.8596 0 11.8133 0C7.5411 0 4.74885 2.58057 4.74885 7.25243V11.3592H0V16.7476H4.74885V29.7736C5.7156 29.9245 6.69268 30.0003 7.67123 30C8.66542 30 9.64137 29.9225 10.5936 29.7736V16.7476H14.9516Z"
+                fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" class="nav-links__social-item">
+            <svg width="100%" height="100%" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.9516 16.7476L15.7808 11.3592H10.5936V7.8625C10.5936 6.38837 11.3182 4.95145 13.6416 4.95145H16V0.364069C16 0.364069 13.8596 0 11.8133 0C7.5411 0 4.74885 2.58057 4.74885 7.25243V11.3592H0V16.7476H4.74885V29.7736C5.7156 29.9245 6.69268 30.0003 7.67123 30C8.66542 30 9.64137 29.9225 10.5936 29.7736V16.7476H14.9516Z"
+                fill="currentColor" />
+            </svg>
+          </a>
+          <a href="#" class="nav-links__social-item">
+            <svg width="100%" height="100%" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.9516 16.7476L15.7808 11.3592H10.5936V7.8625C10.5936 6.38837 11.3182 4.95145 13.6416 4.95145H16V0.364069C16 0.364069 13.8596 0 11.8133 0C7.5411 0 4.74885 2.58057 4.74885 7.25243V11.3592H0V16.7476H4.74885V29.7736C5.7156 29.9245 6.69268 30.0003 7.67123 30C8.66542 30 9.64137 29.9225 10.5936 29.7736V16.7476H14.9516Z"
+                fill="currentColor" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -48,8 +76,28 @@
 
   <section class="story container">
     <div class="story-grid">
-      <div class="story-grid-item left"></div>
-      <div class="story-grid-item right"></div>
+      <div class="story-grid-item story-grid-item__left">
+        <div class="story-grid-item__card1">
+          <div class="story-card1__main text-h3">The phrase “safe and sound” evokes feelings of happiness, security, and peace.</div>
+          <div class="story-card1__sub text-h6">“Safe and sound” inspired the name of our program, as it aligns with our vision of what cities should be.</div>
+        </div>
+        <div class="story-grid-item__card2">
+          <div class="story-card2__main text-h3">In fact, the name was suggested by teenager Mohamed Abulfadl in an international competition for young people!</div>
+        </div>
+      </div>
+      <div class="story-grid-item story-grid-item__right">
+        <div class="story-toggle-area">
+          <div class="story-toggle-wrapper">
+            <div class="story-toggle-ball"></div>
+          </div>
+          <div class="story-toggle__info text-h6-mini">Click to know more</div>
+        </div>
+        <div class="story-grid-item__bg">
+          <div class="story-grid-item__bg-item1"></div>
+          <div class="story-grid-item__bg-item2"></div>
+          <div class="story-grid-item__bg-item3"></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -108,9 +156,14 @@
     </div>
   </section>
 
-  <section class="approach-intro container">
+  <section class="approach-intro container-mini">
     <div class="approach-intro__main text-h3">S2 Cities is an <span class="highlight-y">open and iterative</span> program based on a cyclical process of system understanding, building capacities, prototyping solutions, and improving and scaling
       solutions.</div>
+  </section>
+
+  <section class="approach container-mini"></section>
+
+  <section class="approach-additional container-mini">
     <div class="approach-intro__grid">
       <div class="approach-intro__sub text-h5">While aligning with these larger goals, local partners design their own methodology according to the local context and the city’s needs and priorities. Youth engagement is central to all stages of the
         program.</div>
@@ -141,8 +194,6 @@
     </div>
   </section>
 
-  <section class="approach container"></section>
-
   <section class="cities">
     <div class="container">
       <div class="cities__title text-h1">Program Cities & Timeline</div>
@@ -161,8 +212,7 @@
                 <div class="cities-acc__city text-h2">Bandung</div>
               </div>
               <div class="cities-acc__toggle-wrapper">
-                <div class="cities-acc__toggle-h"></div>
-                <div class="cities-acc__toggle-v"></div>
+                <div class="cities-acc__toggle-lottie"></div>
               </div>
             </div>
             <div class="cities-acc__body">
@@ -186,8 +236,7 @@
                 <div class="cities-acc__city text-h2">Envigado</div>
               </div>
               <div class="cities-acc__toggle-wrapper">
-                <div class="cities-acc__toggle-h"></div>
-                <div class="cities-acc__toggle-v"></div>
+                <div class="cities-acc__toggle-lottie"></div>
               </div>
             </div>
             <div class="cities-acc__body">
@@ -214,9 +263,50 @@
     </div>
   </section>
 
-  <section class="spotlight container"></section>
+  <section class="spotlight container">
+    <div class="spotlight-slider"></div>
+  </section>
 
-  <section class="partners container"></section>
+  <section class="partners container-mini">
+    <div class="partners-intro">
+      <div class="partners-intro__main text-h2">About The Collaborative</div>
+      <div class="partners-intro__sub text-h6">The S²Cities Global Program Team is a collaborative of organizations leveraging various skills, areas of expertise, and networks.</div>
+    </div>
+    <div class="partners-acc-wrapper">
+      <div class="partners-acc">
+        <div class="partners-acc__head">
+          <div class="partners-acc__title text-h3">Global</div>
+          <div class="partners-acc__toggle-wrapper">
+            <div class="partners-acc__toggle-lottie"></div>
+          </div>
+        </div>
+        <div class="partners-acc__body">
+          <div class="partners-grid">
+            <div class="partners-grid__item">
+              <div class="partners-grid-item__image-wrapper">
+                <img src="" alt="" class="partners-grid-item__image">
+              </div>
+              <div class="partners-grid-item__title text-h6-mini"></div>
+              <div class="partners-grid-item__icon-wrapper">
+                <img src="" alt="" class="partners-grid-item__icon">
+              </div>
+              <div class="partners-grid-item__overlay">
+                <div class="partners-grid-item__overlay-sub"></div>
+                <div class="partners-grid-item__overlay-main"></div>
+                <div class="partners-grid-item__overlay-desc"></div>
+                <div class="partners-grid-item__overlay-logo-wrapper">
+                  <img src="" alt="" class="partners-grid-item__overlay-logo">
+                </div>
+                <div class="partners-grid-item__overlay-icon-wrapper">
+                  <img src="" alt="" class="partners-grid-item__overlay-icon">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="marquee-wlink">
     <div class="marquee-wlink__rotate">
@@ -330,7 +420,7 @@
     </div>
   </section>
 
-  <section class="ctas container">
+  <section class="ctas container-mini">
     <div class="cta-item cta-yellow">
       <div class="cta-item__info">
         <div class="cta-item__button text-h6">Invest In Our Scaleup</div>
@@ -368,7 +458,8 @@
       <div class="footer-gib__icon-wrapper">
         <img src="assets/images/gib-logo.png" alt="" class="footer-gib__icon">
       </div>
-      <div class="footer-gib__text text-h6-mini">The Safe and Sound Cities Program (S²Cities) is an initiative proudly led by Global Infrastructure Basel Foundation, hosted by Swiss Philanthropy Foundation, and with the support of Fondation Botnar.</div>
+      <div class="footer-gib__text text-h6-mini">The Safe and Sound Cities Program (S²Cities) is an initiative proudly led by Global Infrastructure Basel Foundation, hosted by Swiss Philanthropy Foundation, and with the support of Fondation Botnar.
+      </div>
     </div>
     <div class="footer-main">
       <div class="footer-main-flex container">
@@ -388,13 +479,9 @@
         <div class="footer-main__col">
           <div class="footer-col__title text-h6-mini">Socials</div>
           <div class="footer-col__links">
-            <a href="#" class="footer-col__item text-h6">Instagram</a>
             <a href="#" class="footer-col__item text-h6">LinkedIn</a>
             <a href="#" class="footer-col__item text-h6">Twitter</a>
             <a href="#" class="footer-col__item text-h6">Facebook</a>
-            <a href="#" class="footer-col__item text-h6">Youtube</a>
-            <a href="#" class="footer-col__item text-h6">Reddit</a>
-            <a href="#" class="footer-col__item text-h6">Discord</a>
           </div>
         </div>
         <div class="footer-main__col">

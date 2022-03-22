@@ -722,9 +722,13 @@ p, h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 4em;
-  padding: 6em 15%;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  padding-left: 15%;
+  padding-right: 12%;
   margin: 0 auto;
   margin-bottom: 2em;
+  align-items: center;
 }
 
 .cta-yellow{
@@ -754,6 +758,10 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0.3em 1em;
   margin-bottom: 1.5em;
   font-weight: 500;
+}
+
+.cta-item__image-wrapper{
+  mix-blend-mode: multiply;
 }
 
 
@@ -989,7 +997,7 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  ba
+  cursor: pointer;
 }
 
 .principles-acc__titles-sub{

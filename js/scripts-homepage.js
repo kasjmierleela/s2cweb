@@ -4,9 +4,6 @@ document.addEventListener("DOMContentLoaded", ready);
 function ready() {
 
 
-  //homepage scripts /////////////////////////////////////////////////////////////////////
-  // if (window.location.pathname == '/index.html'){
-
     //handle muhammad story cards
     const storyToggle = document.querySelector(".story-toggle-area");
     const storyToggleBall = document.querySelector(".story-toggle-ball");
@@ -99,10 +96,6 @@ function ready() {
         }
       })
     }
-
-  // }
-
-
 
 
 

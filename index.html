@@ -12,8 +12,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
 
   <link href="css/styles.css" rel="stylesheet">
-  <script src="js/gsap.min.js" defer="defer"></script>
-  <script src="js/lottie.js" defer="defer"></script>
+
+  <script src="js/gsap.min.js"></script>
+  <script src="js/Draggable.min.js"></script>
+  <script src="js/InertiaPlugin.min.js"></script>
+  <script src="js/lottie.js"></script>
+
   <script src="js/scripts-homepage.js" defer="defer"></script>
 
 
@@ -34,23 +38,30 @@
         </div>
         <div class="nav-links__social">
           <a href="#" class="nav-links__social-item">
-            <svg width="100%" height="100%" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
-                d="M14.9516 16.7476L15.7808 11.3592H10.5936V7.8625C10.5936 6.38837 11.3182 4.95145 13.6416 4.95145H16V0.364069C16 0.364069 13.8596 0 11.8133 0C7.5411 0 4.74885 2.58057 4.74885 7.25243V11.3592H0V16.7476H4.74885V29.7736C5.7156 29.9245 6.69268 30.0003 7.67123 30C8.66542 30 9.64137 29.9225 10.5936 29.7736V16.7476H14.9516Z"
+                d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z"
                 fill="currentColor" />
             </svg>
           </a>
           <a href="#" class="nav-links__social-item">
-            <svg width="100%" height="100%" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M14.9516 16.7476L15.7808 11.3592H10.5936V7.8625C10.5936 6.38837 11.3182 4.95145 13.6416 4.95145H16V0.364069C16 0.364069 13.8596 0 11.8133 0C7.5411 0 4.74885 2.58057 4.74885 7.25243V11.3592H0V16.7476H4.74885V29.7736C5.7156 29.9245 6.69268 30.0003 7.67123 30C8.66542 30 9.64137 29.9225 10.5936 29.7736V16.7476H14.9516Z"
-                fill="currentColor" />
+            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1021_421)">
+                <path
+                  d="M23.954 4.56909C23.069 4.95809 22.124 5.22309 21.129 5.34409C22.143 4.73309 22.923 3.77009 23.292 2.62109C22.341 3.17609 21.287 3.58009 20.165 3.80509C19.269 2.84609 17.992 2.24609 16.574 2.24609C13.857 2.24609 11.654 4.44909 11.654 7.16309C11.654 7.55309 11.699 7.92809 11.781 8.28709C7.691 8.09409 4.066 6.13009 1.64 3.16109C1.213 3.88309 0.974 4.72209 0.974 5.63609C0.974 7.34609 1.844 8.84909 3.162 9.73209C2.355 9.70609 1.596 9.48409 0.934 9.11609V9.17709C0.934 11.5621 2.627 13.5511 4.88 14.0041C4.467 14.1151 4.031 14.1751 3.584 14.1751C3.27 14.1751 2.969 14.1451 2.668 14.0891C3.299 16.0421 5.113 17.4661 7.272 17.5061C5.592 18.8251 3.463 19.6111 1.17 19.6111C0.78 19.6111 0.391 19.5881 0 19.5441C2.189 20.9381 4.768 21.7531 7.557 21.7531C16.611 21.7531 21.556 14.2571 21.556 7.76709C21.556 7.55809 21.556 7.34709 21.541 7.13709C22.502 6.44809 23.341 5.57709 24.001 4.58909L23.954 4.56909Z"
+                  fill="currentColor" />
+              </g>
+              <defs>
+                <clipPath id="clip0_1021_421">
+                  <rect width="100%" height="100%" fill="currentColor" />
+                </clipPath>
+              </defs>
             </svg>
           </a>
           <a href="#" class="nav-links__social-item">
-            <svg width="100%" height="100%" viewBox="0 0 16 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
-                d="M14.9516 16.7476L15.7808 11.3592H10.5936V7.8625C10.5936 6.38837 11.3182 4.95145 13.6416 4.95145H16V0.364069C16 0.364069 13.8596 0 11.8133 0C7.5411 0 4.74885 2.58057 4.74885 7.25243V11.3592H0V16.7476H4.74885V29.7736C5.7156 29.9245 6.69268 30.0003 7.67123 30C8.66542 30 9.64137 29.9225 10.5936 29.7736V16.7476H14.9516Z"
+                d="M12 0C8.74 0 8.333 0.015 7.053 0.072C5.775 0.132 4.905 0.333 4.14 0.63C3.351 0.936 2.681 1.347 2.014 2.014C1.347 2.681 0.935 3.35 0.63 4.14C0.333 4.905 0.131 5.775 0.072 7.053C0.012 8.333 0 8.74 0 12C0 15.26 0.015 15.667 0.072 16.947C0.132 18.224 0.333 19.095 0.63 19.86C0.936 20.648 1.347 21.319 2.014 21.986C2.681 22.652 3.35 23.065 4.14 23.37C4.906 23.666 5.776 23.869 7.053 23.928C8.333 23.988 8.74 24 12 24C15.26 24 15.667 23.985 16.947 23.928C18.224 23.868 19.095 23.666 19.86 23.37C20.648 23.064 21.319 22.652 21.986 21.986C22.652 21.319 23.065 20.651 23.37 19.86C23.666 19.095 23.869 18.224 23.928 16.947C23.988 15.667 24 15.26 24 12C24 8.74 23.985 8.333 23.928 7.053C23.868 5.776 23.666 4.904 23.37 4.14C23.064 3.351 22.652 2.681 21.986 2.014C21.319 1.347 20.651 0.935 19.86 0.63C19.095 0.333 18.224 0.131 16.947 0.072C15.667 0.012 15.26 0 12 0ZM12 2.16C15.203 2.16 15.585 2.176 16.85 2.231C18.02 2.286 18.655 2.48 19.077 2.646C19.639 2.863 20.037 3.123 20.459 3.542C20.878 3.962 21.138 4.361 21.355 4.923C21.519 5.345 21.715 5.98 21.768 7.15C21.825 8.416 21.838 8.796 21.838 12C21.838 15.204 21.823 15.585 21.764 16.85C21.703 18.02 21.508 18.655 21.343 19.077C21.119 19.639 20.864 20.037 20.444 20.459C20.025 20.878 19.62 21.138 19.064 21.355C18.644 21.519 17.999 21.715 16.829 21.768C15.555 21.825 15.18 21.838 11.97 21.838C8.759 21.838 8.384 21.823 7.111 21.764C5.94 21.703 5.295 21.508 4.875 21.343C4.306 21.119 3.915 20.864 3.496 20.444C3.075 20.025 2.806 19.62 2.596 19.064C2.431 18.644 2.237 17.999 2.176 16.829C2.131 15.569 2.115 15.18 2.115 11.985C2.115 8.789 2.131 8.399 2.176 7.124C2.237 5.954 2.431 5.31 2.596 4.89C2.806 4.32 3.075 3.93 3.496 3.509C3.915 3.09 4.306 2.82 4.875 2.611C5.295 2.445 5.926 2.25 7.096 2.19C8.371 2.145 8.746 2.13 11.955 2.13L12 2.16ZM12 5.838C8.595 5.838 5.838 8.598 5.838 12C5.838 15.405 8.598 18.162 12 18.162C15.405 18.162 18.162 15.402 18.162 12C18.162 8.595 15.402 5.838 12 5.838ZM12 16C9.79 16 8 14.21 8 12C8 9.79 9.79 8 12 8C14.21 8 16 9.79 16 12C16 14.21 14.21 16 12 16ZM19.846 5.595C19.846 6.39 19.2 7.035 18.406 7.035C17.611 7.035 16.966 6.389 16.966 5.595C16.966 4.801 17.612 4.156 18.406 4.156C19.199 4.155 19.846 4.801 19.846 5.595Z"
                 fill="currentColor" />
             </svg>
           </a>
@@ -161,12 +172,75 @@
       solutions.</div>
   </section>
 
-  <section class="approach container-mini"></section>
+  <section class="approach container-mini">
+    <div class="approach-left">
+      <div class="approach-titles">
+        <div class="approach-titles__main text-h2">Our Approach</div>
+        <div class="approach-titles__sub text-h6">Safer Cities created for and by the youth.</div>
+      </div>
+      <div class="approach-step5">
+        <div class="approach-step__index">
+          <div class="approach-step__index-row">
+            <div class="approach-step__row-icon-wrapper">
+              <img src="assets/images/understand.png" alt="" class="approach-step__row-icon">
+            </div>
+            <div class="approach-step__row-titles">
+              <div class="approach-step__row-title-sub text-h6-mini">Step 1</div>
+              <div class="approach-step__row-title-main text-h4">Understanding Systems</div>
+            </div>
+          </div>
+          <div class="approach-step__index-row">
+            <div class="approach-step__row-icon-wrapper">
+              <img src="assets/images/build.png" alt="" class="approach-step__row-icon">
+            </div>
+            <div class="approach-step__row-titles">
+              <div class="approach-step__row-title-sub text-h6-mini">Step 2</div>
+              <div class="approach-step__row-title-main text-h4">Building Capacities</div>
+            </div>
+          </div>
+          <div class="approach-step__index-row">
+            <div class="approach-step__row-icon-wrapper">
+              <img src="assets/images/catalyse.png" alt="" class="approach-step__row-icon">
+            </div>
+            <div class="approach-step__row-titles">
+              <div class="approach-step__row-title-sub text-h6-mini">Step 3</div>
+              <div class="approach-step__row-title-main text-h4">Catalysing Innovation</div>
+            </div>
+          </div>
+          <div class="approach-step__index-row">
+            <div class="approach-step__row-icon-wrapper">
+              <img src="assets/images/scale.png" alt="" class="approach-step__row-icon">
+            </div>
+            <div class="approach-step__row-titles">
+              <div class="approach-step__row-title-sub text-h6-mini">Step 4</div>
+              <div class="approach-step__row-title-main text-h4">Scaling Systems</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="approach-step1">
+        <div class="approach-step__title text-h3">Understanding Systems</div>
+        <div class="approach-step__serial text-d1">1</div>
+        <ul class="approach-step__desc">
+          <li class="approach-step__desc-pointer"></li>
+          <li class="approach-step__desc-pointer"></li>
+          <li class="approach-step__desc-pointer"></li>
+        </ul>
+        <div class="approach-step__tags-wrapper">
+          <div class="approach-step__tag text-h6-mini">Systemic Analysis</div>
+          <div class="approach-step__tag text-h6-mini">Youth Engagement</div>
+          <div class="approach-step__tag text-h6-mini">Stakeholder Mapping</div>
+          <div class="approach-step__tag text-h6-mini">Data Collection</div>
+        </div>
+      </div>
+    </div>
+    <div class="approach-right">
+      <div class="approach-lottie"></div>
+    </div>
+  </section>
 
   <section class="approach-additional container-mini">
     <div class="approach-intro__grid">
-      <div class="approach-intro__sub text-h5">While aligning with these larger goals, local partners design their own methodology according to the local context and the city’s needs and priorities. Youth engagement is central to all stages of the
-        program.</div>
       <div class="approach-intro__buttons">
         <a href="#" class="approach-intro__button">
           <div class="approach-intro__button-text text-h6-caps">Principles Driving Our Actions</div>
@@ -191,6 +265,8 @@
           </div>
         </a>
       </div>
+      <div class="approach-intro__sub text-h5">While aligning with these larger goals, local partners design their own methodology according to the local context and the city’s needs and priorities. Youth engagement is central to all stages of the
+        program.</div>
     </div>
   </section>
 
@@ -263,8 +339,80 @@
     </div>
   </section>
 
-  <section class="spotlight container">
-    <div class="spotlight-slider"></div>
+  <section class="spotlight">
+    <div class="spotlight-title container text-h2">Spotlight & News</div>
+    <div class="spotlight-slider">
+      <div class="spotlight-slide">
+        <a href="#" class="blog-card">
+          <div class="blog-card__top">
+            <div class="blog-card__image-wrapper">
+              <img src="assets/images/blog-card-placeholder.png" alt="" class="blog-card__image">
+            </div>
+            <div class="blog-card__button">Read More</div>
+          </div>
+          <div class="blog-card__info">
+            <div class="blog-card__title text-h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</div>
+            <div class="blog-card__tag-s2 text-h6-mini">Article</div>
+          </div>
+        </a>
+      </div>
+      <div class="spotlight-slide">
+        <a href="#" class="blog-card">
+          <div class="blog-card__top">
+            <div class="blog-card__image-wrapper">
+              <img src="assets/images/blog-card-placeholder.png" alt="" class="blog-card__image">
+            </div>
+            <div class="blog-card__button">Read More</div>
+          </div>
+          <div class="blog-card__info">
+            <div class="blog-card__title text-h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</div>
+            <div class="blog-card__tag-s2 text-h6-mini">Article</div>
+          </div>
+        </a>
+      </div>
+      <div class="spotlight-slide">
+        <a href="#" class="blog-card">
+          <div class="blog-card__top">
+            <div class="blog-card__image-wrapper">
+              <img src="assets/images/blog-card-placeholder.png" alt="" class="blog-card__image">
+            </div>
+            <div class="blog-card__button">Read More</div>
+          </div>
+          <div class="blog-card__info">
+            <div class="blog-card__title text-h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</div>
+            <div class="blog-card__tag-s2 text-h6-mini">Article</div>
+          </div>
+        </a>
+      </div>
+      <div class="spotlight-slide">
+        <a href="#" class="blog-card">
+          <div class="blog-card__top">
+            <div class="blog-card__image-wrapper">
+              <img src="assets/images/blog-card-placeholder.png" alt="" class="blog-card__image">
+            </div>
+            <div class="blog-card__button">Read More</div>
+          </div>
+          <div class="blog-card__info">
+            <div class="blog-card__title text-h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</div>
+            <div class="blog-card__tag-s2 text-h6-mini">Article</div>
+          </div>
+        </a>
+      </div>
+      <div class="spotlight-slide">
+        <a href="#" class="blog-card">
+          <div class="blog-card__top">
+            <div class="blog-card__image-wrapper">
+              <img src="assets/images/blog-card-placeholder.png" alt="" class="blog-card__image">
+            </div>
+            <div class="blog-card__button">Read More</div>
+          </div>
+          <div class="blog-card__info">
+            <div class="blog-card__title text-h5">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</div>
+            <div class="blog-card__tag-s2 text-h6-mini">Article</div>
+          </div>
+        </a>
+      </div>
+    </div>
   </section>
 
   <section class="partners container-mini">
@@ -275,30 +423,398 @@
     <div class="partners-acc-wrapper">
       <div class="partners-acc">
         <div class="partners-acc__head">
-          <div class="partners-acc__title text-h3">Global</div>
+          <div class="partners-acc__title text-h3">Global Partners</div>
           <div class="partners-acc__toggle-wrapper">
             <div class="partners-acc__toggle-lottie"></div>
           </div>
         </div>
         <div class="partners-acc__body">
+          <div class="partners-acc__divider-wrapper">
+            <div class="partners-acc__divider"></div>
+          </div>
           <div class="partners-grid">
             <div class="partners-grid__item">
-              <div class="partners-grid-item__image-wrapper">
-                <img src="" alt="" class="partners-grid-item__image">
+              <div class="partners-grid__item-clickable">
+                <div class="partners-grid-item__image-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__image">
+                </div>
+                <div class="partners-grid-item__title text-h6-mini">Program Manager and Strategic Advisor</div>
+                <div class="partners-grid-item__icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__icon">
+                </div>
               </div>
-              <div class="partners-grid-item__title text-h6-mini"></div>
-              <div class="partners-grid-item__icon-wrapper">
-                <img src="" alt="" class="partners-grid-item__icon">
+            </div>
+            <div class="partners-grid__item">
+              <div class="partners-grid__item-clickable">
+                <div class="partners-grid-item__image-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__image">
+                </div>
+                <div class="partners-grid-item__title text-h6-mini">Program Manager and Strategic Advisor</div>
+                <div class="partners-grid-item__icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__icon">
+                </div>
               </div>
+            </div>
+            <div class="partners-grid__item">
+              <div class="partners-grid__item-clickable">
+                <div class="partners-grid-item__image-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__image">
+                </div>
+                <div class="partners-grid-item__title text-h6-mini">Program Manager and Strategic Advisor</div>
+                <div class="partners-grid-item__icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__icon">
+                </div>
+              </div>
+            </div>
+            <!-- grid item overlays - must maintain same order as partner grid items -->
+            <div class="partner-grid-item__overlay-parent">
               <div class="partners-grid-item__overlay">
-                <div class="partners-grid-item__overlay-sub"></div>
-                <div class="partners-grid-item__overlay-main"></div>
-                <div class="partners-grid-item__overlay-desc"></div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-sub text-h6-mini">Program Manager & Strategic Advisor</div>
+                  <div class="partners-grid-item__overlay-main text-h4">Global Infrastructure Basel</div>
+                </div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-desc">Supporting the design, implementation, and scaling of sustainable and resilient urban infrastructure solutions.</div>
+                </div>
                 <div class="partners-grid-item__overlay-logo-wrapper">
-                  <img src="" alt="" class="partners-grid-item__overlay-logo">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__overlay-logo">
                 </div>
                 <div class="partners-grid-item__overlay-icon-wrapper">
-                  <img src="" alt="" class="partners-grid-item__overlay-icon">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__overlay-icon">
+                </div>
+              </div>
+            </div>
+            <div class="partner-grid-item__overlay-parent">
+              <div class="partners-grid-item__overlay">
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-sub text-h6-mini">Program Manager & Strategic Advisor</div>
+                  <div class="partners-grid-item__overlay-main text-h4">Global Infrastructure Basel</div>
+                </div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-desc">Supporting the design, implementation, and scaling of sustainable and resilient urban infrastructure solutions.</div>
+                </div>
+                <div class="partners-grid-item__overlay-logo-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__overlay-logo">
+                </div>
+                <div class="partners-grid-item__overlay-icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__overlay-icon">
+                </div>
+              </div>
+            </div>
+            <div class="partner-grid-item__overlay-parent">
+              <div class="partners-grid-item__overlay">
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-sub text-h6-mini">Program Manager & Strategic Advisor</div>
+                  <div class="partners-grid-item__overlay-main text-h4">Global Infrastructure Basel</div>
+                </div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-desc">Supporting the design, implementation, and scaling of sustainable and resilient urban infrastructure solutions.</div>
+                </div>
+                <div class="partners-grid-item__overlay-logo-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__overlay-logo">
+                </div>
+                <div class="partners-grid-item__overlay-icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__overlay-icon">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="partners-acc">
+        <div class="partners-acc__head">
+          <div class="partners-acc__title text-h3">Local Partners</div>
+          <div class="partners-acc__toggle-wrapper">
+            <div class="partners-acc__toggle-lottie"></div>
+          </div>
+        </div>
+        <div class="partners-acc__body">
+          <div class="partners-acc__divider-wrapper">
+            <div class="partners-acc__divider"></div>
+          </div>
+          <div class="partners-grid">
+            <div class="partners-grid__item">
+              <div class="partners-grid__item-clickable">
+                <div class="partners-grid-item__image-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__image">
+                </div>
+                <div class="partners-grid-item__title text-h6-mini">Program Manager and Strategic Advisor</div>
+                <div class="partners-grid-item__icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__icon">
+                </div>
+              </div>
+            </div>
+            <div class="partners-grid__item">
+              <div class="partners-grid__item-clickable">
+                <div class="partners-grid-item__image-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__image">
+                </div>
+                <div class="partners-grid-item__title text-h6-mini">Program Manager and Strategic Advisor</div>
+                <div class="partners-grid-item__icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__icon">
+                </div>
+              </div>
+            </div>
+            <div class="partners-grid__item">
+              <div class="partners-grid__item-clickable">
+                <div class="partners-grid-item__image-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__image">
+                </div>
+                <div class="partners-grid-item__title text-h6-mini">Program Manager and Strategic Advisor</div>
+                <div class="partners-grid-item__icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__icon">
+                </div>
+              </div>
+            </div>
+            <!-- grid item overlays - must maintain same order as partner grid items -->
+            <div class="partner-grid-item__overlay-parent">
+              <div class="partners-grid-item__overlay">
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-sub text-h6-mini">Program Manager & Strategic Advisor</div>
+                  <div class="partners-grid-item__overlay-main text-h4">Global Infrastructure Basel</div>
+                </div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-desc">Supporting the design, implementation, and scaling of sustainable and resilient urban infrastructure solutions.</div>
+                </div>
+                <div class="partners-grid-item__overlay-logo-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__overlay-logo">
+                </div>
+                <div class="partners-grid-item__overlay-icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__overlay-icon">
+                </div>
+              </div>
+            </div>
+            <div class="partner-grid-item__overlay-parent">
+              <div class="partners-grid-item__overlay">
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-sub text-h6-mini">Program Manager & Strategic Advisor</div>
+                  <div class="partners-grid-item__overlay-main text-h4">Global Infrastructure Basel</div>
+                </div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-desc">Supporting the design, implementation, and scaling of sustainable and resilient urban infrastructure solutions.</div>
+                </div>
+                <div class="partners-grid-item__overlay-logo-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__overlay-logo">
+                </div>
+                <div class="partners-grid-item__overlay-icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__overlay-icon">
+                </div>
+              </div>
+            </div>
+            <div class="partner-grid-item__overlay-parent">
+              <div class="partners-grid-item__overlay">
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-sub text-h6-mini">Program Manager & Strategic Advisor</div>
+                  <div class="partners-grid-item__overlay-main text-h4">Global Infrastructure Basel</div>
+                </div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-desc">Supporting the design, implementation, and scaling of sustainable and resilient urban infrastructure solutions.</div>
+                </div>
+                <div class="partners-grid-item__overlay-logo-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__overlay-logo">
+                </div>
+                <div class="partners-grid-item__overlay-icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__overlay-icon">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="partners-acc">
+        <div class="partners-acc__head">
+          <div class="partners-acc__title text-h3">Funding Partners</div>
+          <div class="partners-acc__toggle-wrapper">
+            <div class="partners-acc__toggle-lottie"></div>
+          </div>
+        </div>
+        <div class="partners-acc__body">
+          <div class="partners-acc__divider-wrapper">
+            <div class="partners-acc__divider"></div>
+          </div>
+          <div class="partners-grid">
+            <div class="partners-grid__item">
+              <div class="partners-grid__item-clickable">
+                <div class="partners-grid-item__image-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__image">
+                </div>
+                <div class="partners-grid-item__title text-h6-mini">Program Manager and Strategic Advisor</div>
+                <div class="partners-grid-item__icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__icon">
+                </div>
+              </div>
+            </div>
+            <div class="partners-grid__item">
+              <div class="partners-grid__item-clickable">
+                <div class="partners-grid-item__image-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__image">
+                </div>
+                <div class="partners-grid-item__title text-h6-mini">Program Manager and Strategic Advisor</div>
+                <div class="partners-grid-item__icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__icon">
+                </div>
+              </div>
+            </div>
+            <div class="partners-grid__item">
+              <div class="partners-grid__item-clickable">
+                <div class="partners-grid-item__image-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__image">
+                </div>
+                <div class="partners-grid-item__title text-h6-mini">Program Manager and Strategic Advisor</div>
+                <div class="partners-grid-item__icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__icon">
+                </div>
+              </div>
+            </div>
+            <!-- grid item overlays - must maintain same order as partner grid items -->
+            <div class="partner-grid-item__overlay-parent">
+              <div class="partners-grid-item__overlay">
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-sub text-h6-mini">Program Manager & Strategic Advisor</div>
+                  <div class="partners-grid-item__overlay-main text-h4">Global Infrastructure Basel</div>
+                </div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-desc">Supporting the design, implementation, and scaling of sustainable and resilient urban infrastructure solutions.</div>
+                </div>
+                <div class="partners-grid-item__overlay-logo-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__overlay-logo">
+                </div>
+                <div class="partners-grid-item__overlay-icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__overlay-icon">
+                </div>
+              </div>
+            </div>
+            <div class="partner-grid-item__overlay-parent">
+              <div class="partners-grid-item__overlay">
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-sub text-h6-mini">Program Manager & Strategic Advisor</div>
+                  <div class="partners-grid-item__overlay-main text-h4">Global Infrastructure Basel</div>
+                </div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-desc">Supporting the design, implementation, and scaling of sustainable and resilient urban infrastructure solutions.</div>
+                </div>
+                <div class="partners-grid-item__overlay-logo-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__overlay-logo">
+                </div>
+                <div class="partners-grid-item__overlay-icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__overlay-icon">
+                </div>
+              </div>
+            </div>
+            <div class="partner-grid-item__overlay-parent">
+              <div class="partners-grid-item__overlay">
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-sub text-h6-mini">Program Manager & Strategic Advisor</div>
+                  <div class="partners-grid-item__overlay-main text-h4">Global Infrastructure Basel</div>
+                </div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-desc">Supporting the design, implementation, and scaling of sustainable and resilient urban infrastructure solutions.</div>
+                </div>
+                <div class="partners-grid-item__overlay-logo-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__overlay-logo">
+                </div>
+                <div class="partners-grid-item__overlay-icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__overlay-icon">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="partners-acc">
+        <div class="partners-acc__head">
+          <div class="partners-acc__title text-h3">Grant Managing Partners</div>
+          <div class="partners-acc__toggle-wrapper">
+            <div class="partners-acc__toggle-lottie"></div>
+          </div>
+        </div>
+        <div class="partners-acc__body">
+          <div class="partners-acc__divider-wrapper">
+            <div class="partners-acc__divider"></div>
+          </div>
+          <div class="partners-grid">
+            <div class="partners-grid__item">
+              <div class="partners-grid__item-clickable">
+                <div class="partners-grid-item__image-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__image">
+                </div>
+                <div class="partners-grid-item__title text-h6-mini">Program Manager and Strategic Advisor</div>
+                <div class="partners-grid-item__icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__icon">
+                </div>
+              </div>
+            </div>
+            <div class="partners-grid__item">
+              <div class="partners-grid__item-clickable">
+                <div class="partners-grid-item__image-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__image">
+                </div>
+                <div class="partners-grid-item__title text-h6-mini">Program Manager and Strategic Advisor</div>
+                <div class="partners-grid-item__icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__icon">
+                </div>
+              </div>
+            </div>
+            <div class="partners-grid__item">
+              <div class="partners-grid__item-clickable">
+                <div class="partners-grid-item__image-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__image">
+                </div>
+                <div class="partners-grid-item__title text-h6-mini">Program Manager and Strategic Advisor</div>
+                <div class="partners-grid-item__icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__icon">
+                </div>
+              </div>
+            </div>
+            <!-- grid item overlays - must maintain same order as partner grid items -->
+            <div class="partner-grid-item__overlay-parent">
+              <div class="partners-grid-item__overlay">
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-sub text-h6-mini">Program Manager & Strategic Advisor</div>
+                  <div class="partners-grid-item__overlay-main text-h4">Global Infrastructure Basel</div>
+                </div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-desc">Supporting the design, implementation, and scaling of sustainable and resilient urban infrastructure solutions.</div>
+                </div>
+                <div class="partners-grid-item__overlay-logo-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__overlay-logo">
+                </div>
+                <div class="partners-grid-item__overlay-icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__overlay-icon">
+                </div>
+              </div>
+            </div>
+            <div class="partner-grid-item__overlay-parent">
+              <div class="partners-grid-item__overlay">
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-sub text-h6-mini">Program Manager & Strategic Advisor</div>
+                  <div class="partners-grid-item__overlay-main text-h4">Global Infrastructure Basel</div>
+                </div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-desc">Supporting the design, implementation, and scaling of sustainable and resilient urban infrastructure solutions.</div>
+                </div>
+                <div class="partners-grid-item__overlay-logo-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__overlay-logo">
+                </div>
+                <div class="partners-grid-item__overlay-icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__overlay-icon">
+                </div>
+              </div>
+            </div>
+            <div class="partner-grid-item__overlay-parent">
+              <div class="partners-grid-item__overlay">
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-sub text-h6-mini">Program Manager & Strategic Advisor</div>
+                  <div class="partners-grid-item__overlay-main text-h4">Global Infrastructure Basel</div>
+                </div>
+                <div class="partner-grid-item__overlay-row">
+                  <div class="partners-grid-item__overlay-desc">Supporting the design, implementation, and scaling of sustainable and resilient urban infrastructure solutions.</div>
+                </div>
+                <div class="partners-grid-item__overlay-logo-wrapper">
+                  <img src="assets/images/logos/gib.png" alt="" class="partners-grid-item__overlay-logo">
+                </div>
+                <div class="partners-grid-item__overlay-icon-wrapper">
+                  <img src="assets/images/arrow-icon.png" alt="" class="partners-grid-item__overlay-icon">
                 </div>
               </div>
             </div>
@@ -481,7 +997,7 @@
           <div class="footer-col__links">
             <a href="#" class="footer-col__item text-h6">LinkedIn</a>
             <a href="#" class="footer-col__item text-h6">Twitter</a>
-            <a href="#" class="footer-col__item text-h6">Facebook</a>
+            <a href="#" class="footer-col__item text-h6">Instagram</a>
           </div>
         </div>
         <div class="footer-main__col">

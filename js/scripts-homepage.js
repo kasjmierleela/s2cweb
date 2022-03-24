@@ -59,45 +59,45 @@ function ready() {
   let clickCount = 0;
   const clickCountMax = 4;
 
+  const staggerTime = 0.1;
+
   approachClickable.addEventListener("click", function() {
 
     switch (clickCount) {
       case 0:
         hideIndexStep();
-        setTimeout(function(){
-          showApproachStep(clickCount + 1);
-        }, 800);
-        clickCount++;
+        setTimeout(function() {
+          showApproachStep(clickCount);
+          clickCount++;
+        }, staggerTime*4*1000);
         break;
       case 1:
-        hideApproachStep(clickCount);
-        setTimeout(function(){
-          showApproachStep(clickCount + 1);
-        }, 1000);
-        clickCount++;
+        hideApproachStep(clickCount-1);
+        setTimeout(function() {
+          showApproachStep(clickCount);
+          clickCount++;
+        }, staggerTime*5*1000);
         break;
       case 2:
-        hideApproachStep(clickCount);
-        setTimeout(function(){
-          showApproachStep(clickCount + 1);
-        }, 1000);
-        clickCount++;
-
+        hideApproachStep(clickCount-1);
+        setTimeout(function() {
+          showApproachStep(clickCount);
+          clickCount++;
+        }, staggerTime*5*1000);
         break;
       case 3:
-        hideApproachStep(clickCount);
-        setTimeout(function(){
-          showApproachStep(clickCount + 1);
-        }, 1000);
-        clickCount++;
-
+        hideApproachStep(clickCount-1);
+        setTimeout(function() {
+          showApproachStep(clickCount);
+          clickCount++;
+        }, staggerTime*5*1000);
         break;
       case 4:
-        hideApproachStep(clickCount);
-        setTimeout(function(){
+        hideApproachStep(clickCount-1);
+        setTimeout(function() {
           showIndexStep();
-        }, 1000);
-        clickCount = 0;
+          clickCount = 0;
+        }, staggerTime*5*1000);
         break;
       default:
     }
@@ -107,25 +107,35 @@ function ready() {
   function hideIndexStep() {
     gsap.to(".approach-step__index-row", {
       opacity: 0,
-      duration: 0.2,
-      stagger: 0.2
+      duration: staggerTime,
+      stagger: staggerTime
     });
-    setTimeout(function(){
-      indexStepParent.style.display = "none";
-    }, 800);
+    setTimeout(function() {
+      gsap.to(indexStepParent, {
+        opacity: 0,
+        duration: 0.01
+      });
+    }, staggerTime*4*1000);
   }
 
-  function showIndexStep(){
-    indexStepParent.style.display = "auto";
+  function showIndexStep() {
+    gsap.to(indexStepParent, {
+      opacity: 1,
+      duration: 0.01
+    });
     gsap.to(".approach-step__index-row", {
       opacity: 1,
-      duration: 0.2,
-      stagger: 0.2
+      duration: staggerTime,
+      stagger: staggerTime
     });
   }
 
-  function hideApproachStep(stepNumber){
-    const timelineHideStep = gsap.timeline({defaults: {duration: 0.2}});
+  function hideApproachStep(stepNumber) {
+    const timelineHideStep = gsap.timeline({
+      defaults: {
+        duration: staggerTime
+      }
+    });
     timelineHideStep.to(stepSerials[stepNumber], {
       opacity: 0
     });
@@ -141,14 +151,24 @@ function ready() {
     timelineHideStep.to(stepTags[stepNumber], {
       opacity: 0
     });
-    setTimeout(function(){
-      approachStepParents[stepNumber].style.display = "none";
-    }, 1000);
+    setTimeout(function() {
+      gsap.to(approachStepParents[stepNumber], {
+        opacity: 0,
+        duration: 0.01
+      });
+    }, staggerTime*5*1000);
   }
 
-  function showApproachStep(stepNumber){
-    approachStepParents[stepNumber].style.display = "auto";
-    const timelineShowStep = gsap.timeline({defaults: {duration: 0.2}});
+  function showApproachStep(stepNumber) {
+    gsap.to(approachStepParents[stepNumber], {
+      opacity: 1,
+      duration: staggerTime*2
+    });
+    const timelineShowStep = gsap.timeline({
+      defaults: {
+        duration: staggerTime
+      }
+    });
     timelineShowStep.to(stepSerials[stepNumber], {
       opacity: 1
     });

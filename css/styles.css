@@ -488,6 +488,15 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.2em;
 }
 
+.approach-allsteps{
+  height: 23.25em;
+  position: relative;
+}
+
+.approach-step1{
+  opacity: 0;
+}
+
 .approach-step1,
 .approach-step2,
 .approach-step3,
@@ -497,23 +506,26 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
   opacity: 0;
 }
 
 .approach-step1{
-  display: none;
+  /* display: none; */
 }
 
 .approach-step2{
-  display: none;
+  /* display: none; */
 }
 
 .approach-step3{
-  display: none;
+  /* display: none; */
 }
 
 .approach-step4{
-  display: none;
+  /* display: none; */
 }
 
 .approach-step0{
@@ -522,10 +534,12 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .approach-step__title{
   margin-bottom: 0.1em;
+  opacity: 0;
 }
 
 .approach-step__sub{
   margin-bottom: 1.5em;
+  opacity: 0;
 }
 
 .approach-step__serial{
@@ -535,6 +549,7 @@ p, h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   border-radius: 0.25em;
   margin-bottom: 0.5em;
+  opacity: 0;
 }
 
 ul, li {
@@ -544,16 +559,15 @@ ul, li {
 
 .approach-step__desc{
   max-width: 75%;
-}
-
-.approach-step__desc{
   margin-bottom: 2.5em;
+  opacity: 0;
 }
 
 .approach-step__tags-wrapper{
   display: flex;
   flex-wrap: wrap;
   max-width: 85%;
+  opacity: 0;
 }
 
 .approach-step__tag{

@@ -65,6 +65,7 @@ function ready() {
 
     switch (clickCount) {
       case 0:
+        approachLottiePlayer.playSegments([0, 32], true);
         hideIndexStep();
         setTimeout(function() {
           showApproachStep(clickCount);
@@ -72,6 +73,7 @@ function ready() {
         }, staggerTime*4*1000);
         break;
       case 1:
+        approachLottiePlayer.playSegments([32, 62], true);
         hideApproachStep(clickCount-1);
         setTimeout(function() {
           showApproachStep(clickCount);
@@ -79,6 +81,7 @@ function ready() {
         }, staggerTime*5*1000);
         break;
       case 2:
+        approachLottiePlayer.playSegments([62, 87], true);
         hideApproachStep(clickCount-1);
         setTimeout(function() {
           showApproachStep(clickCount);
@@ -86,6 +89,7 @@ function ready() {
         }, staggerTime*5*1000);
         break;
       case 3:
+        approachLottiePlayer.playSegments([87, 112], true);
         hideApproachStep(clickCount-1);
         setTimeout(function() {
           showApproachStep(clickCount);
@@ -93,6 +97,7 @@ function ready() {
         }, staggerTime*5*1000);
         break;
       case 4:
+        approachLottiePlayer.playSegments([112, 149], true);
         hideApproachStep(clickCount-1);
         setTimeout(function() {
           showIndexStep();

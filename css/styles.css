@@ -31,6 +31,14 @@ body {
   font-family: 'Rubik', sans-serif;
   background-color: white;
   color: var(--blue);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 img, picture, video, canvas, svg {
@@ -82,7 +90,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* typography */
 .text-d1 {
-  font-size: 8rem;
+  font-size: 9rem;
   line-height: 1;
 }
 
@@ -462,6 +470,7 @@ p, h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: 0.8fr 1fr;
   grid-column-gap: 3em;
+  cursor: pointer;
 }
 
 .approach-left{
@@ -484,32 +493,67 @@ p, h1, h2, h3, h4, h5, h6 {
 .approach-step3,
 .approach-step4{
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  opacity: 0;
 }
 
 .approach-step1{
   display: none;
 }
 
-.approach-step5{
+.approach-step2{
+  display: none;
+}
+
+.approach-step3{
+  display: none;
+}
+
+.approach-step4{
+  display: none;
+}
+
+.approach-step0{
   /* display: none; */
 }
 
 .approach-step__title{
-  margin-bottom: 0.5em;
+  margin-bottom: 0.1em;
+}
+
+.approach-step__sub{
+  margin-bottom: 1.5em;
 }
 
 .approach-step__serial{
-  position: absolute;
-  top: -0.4em;
-  left: 2%;
-  color: var(--yellow);
-  z-index: -1;
+  background: var(--yellow);
+  padding: 0.3em 0.6em;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+ul, li {
+  margin-left: 0.25em;
+  padding-left: 0.5em;
+}
+
+.approach-step__desc{
+  max-width: 75%;
+}
+
+.approach-step__desc{
+  margin-bottom: 2.5em;
 }
 
 .approach-step__tags-wrapper{
   display: flex;
   flex-wrap: wrap;
-  max-width: 30em;
+  max-width: 85%;
 }
 
 .approach-step__tag{
@@ -519,6 +563,7 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-right: 0.5em;
   margin-bottom: 0.5em;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .approach-step__index-row{
@@ -622,6 +667,7 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .cities-acc__country{
@@ -656,11 +702,11 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .cities-acc__location-wrapper{
-  padding: 3em 0;
+  padding: 1em 0;
 }
 
-.cities-acc__location-image{
-  width: 30%;
+.cities-acc__location-lottie{
+  max-width: 50%;
   margin: 0 auto;
 }
 
@@ -675,14 +721,14 @@ p, h1, h2, h3, h4, h5, h6 {
 .cities-future-text{
   width: 50%;
   margin: 0 auto;
-  margin-bottom: var(--section-margin-internal);
+  margin-bottom: 2.5em;
 }
 
-.cities-map__image{
-  width: 100%;
-  margin: 0 auto;
-  object-fit: contain;
+.cities-map__wrapper{
+  max-width: 80%;
+  margin: 0 auto 2.5em;
 }
+
 
 
 
@@ -748,6 +794,7 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .partners-acc__toggle-wrapper{

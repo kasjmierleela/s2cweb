@@ -39,10 +39,133 @@ function ready() {
   const approachLottiePlayer = lottie.loadAnimation({
     container: approachLottie,
     renderer: 'svg',
-    loop: true,
-    autoplay: true,
+    loop: false,
+    autoplay: false,
     path: 'assets/lotties/approach.json'
   });
+
+  //for the 4 steps
+  const stepSerials = document.querySelectorAll(".approach-step__serial");
+  const stepTitles = document.querySelectorAll(".approach-step__title");
+  const stepSubtitles = document.querySelectorAll(".approach-step__sub");
+  const stepDescs = document.querySelectorAll(".approach-step__desc");
+  const stepTags = document.querySelectorAll(".approach-step__tags-wrapper");
+
+  //parent wrappers of each step (5 and 0 are the same)
+  const indexStepParent = document.querySelector(".approach-step0");
+  const approachStepParents = document.querySelectorAll(".approach-step");
+
+  const approachClickable = document.querySelector(".approach");
+  let clickCount = 0;
+  const clickCountMax = 4;
+
+  approachClickable.addEventListener("click", function() {
+
+    switch (clickCount) {
+      case 0:
+        hideIndexStep();
+        setTimeout(function(){
+          showApproachStep(clickCount + 1);
+        }, 800);
+        clickCount++;
+        break;
+      case 1:
+        hideApproachStep(clickCount);
+        setTimeout(function(){
+          showApproachStep(clickCount + 1);
+        }, 1000);
+        clickCount++;
+        break;
+      case 2:
+        hideApproachStep(clickCount);
+        setTimeout(function(){
+          showApproachStep(clickCount + 1);
+        }, 1000);
+        clickCount++;
+
+        break;
+      case 3:
+        hideApproachStep(clickCount);
+        setTimeout(function(){
+          showApproachStep(clickCount + 1);
+        }, 1000);
+        clickCount++;
+
+        break;
+      case 4:
+        hideApproachStep(clickCount);
+        setTimeout(function(){
+          showIndexStep();
+        }, 1000);
+        clickCount = 0;
+        break;
+      default:
+    }
+
+  });
+
+  function hideIndexStep() {
+    gsap.to(".approach-step__index-row", {
+      opacity: 0,
+      duration: 0.2,
+      stagger: 0.2
+    });
+    setTimeout(function(){
+      indexStepParent.style.display = "none";
+    }, 800);
+  }
+
+  function showIndexStep(){
+    indexStepParent.style.display = "auto";
+    gsap.to(".approach-step__index-row", {
+      opacity: 1,
+      duration: 0.2,
+      stagger: 0.2
+    });
+  }
+
+  function hideApproachStep(stepNumber){
+    const timelineHideStep = gsap.timeline({defaults: {duration: 0.2}});
+    timelineHideStep.to(stepSerials[stepNumber], {
+      opacity: 0
+    });
+    timelineHideStep.to(stepTitles[stepNumber], {
+      opacity: 0
+    });
+    timelineHideStep.to(stepSubtitles[stepNumber], {
+      opacity: 0
+    });
+    timelineHideStep.to(stepDescs[stepNumber], {
+      opacity: 0
+    });
+    timelineHideStep.to(stepTags[stepNumber], {
+      opacity: 0
+    });
+    setTimeout(function(){
+      approachStepParents[stepNumber].style.display = "none";
+    }, 1000);
+  }
+
+  function showApproachStep(stepNumber){
+    approachStepParents[stepNumber].style.display = "auto";
+    const timelineShowStep = gsap.timeline({defaults: {duration: 0.2}});
+    timelineShowStep.to(stepSerials[stepNumber], {
+      opacity: 1
+    });
+    timelineShowStep.to(stepTitles[stepNumber], {
+      opacity: 1
+    });
+    timelineShowStep.to(stepSubtitles[stepNumber], {
+      opacity: 1
+    });
+    timelineShowStep.to(stepDescs[stepNumber], {
+      opacity: 1
+    });
+    timelineShowStep.to(stepTags[stepNumber], {
+      opacity: 1
+    });
+  }
+
 
 
 
@@ -55,6 +178,11 @@ function ready() {
   const toggleLotties = document.querySelectorAll(".cities-acc__toggle-lottie");
   const accLotties = [];
 
+  //populate this array with lottie paths in order
+  const cityMapLottiesSrc = ["assets/lotties/bandung.json", "assets/lotties/envigado.json"];
+  const cityMapLotties = document.querySelectorAll(".cities-acc__location-lottie");
+  const cityMapLottiesPlayers = [];
+
   for (let i = 0; i < toggleLotties.length; i++) {
     accLotties[i] = lottie.loadAnimation({
       container: toggleLotties[i],
@@ -64,6 +192,14 @@ function ready() {
       path: 'assets/lotties/accordion.json'
     });
 
+    cityMapLottiesPlayers[i] = lottie.loadAnimation({
+      container: cityMapLotties[i],
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: cityMapLottiesSrc[i]
+    });
+
     accHeads[i].addEventListener("click", function() {
       if (window.getComputedStyle(accBodys[i]).height == "0px") {
         gsap.to(accBodys[i], {
@@ -71,16 +207,31 @@ function ready() {
           duration: 0.5
         });
         accLotties[i].playSegments([0, 15], true);
+        cityMapLottiesPlayers[i].playSegments([0, 20], true);
       } else {
-        gsap.to(accBodys[i], {
-          height: "0",
-          duration: 0.5
-        });
-        accLotties[i].playSegments([15, 0], true);
+        cityMapLottiesPlayers[i].playSegments([20, 0], true);
+        setTimeout(function() {
+          gsap.to(accBodys[i], {
+            height: "0",
+            duration: 0.5
+          });
+          accLotties[i].playSegments([15, 0], true);
+        }, 200);
       }
     })
   }
 
+
+
+  //handle future cities map lottie
+  const futureMapLottie = document.querySelector(".cities-map__lottie");
+  const futureMapLottiePlayer = lottie.loadAnimation({
+    container: futureMapLottie,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'assets/lotties/futures-map.json'
+  });
 
 
 
@@ -287,23 +438,23 @@ function ready() {
   const body = document.querySelector("body");
   console.log(body);
 
-  for(let i=0; i<partnerClickables.length; i++){
+  for (let i = 0; i < partnerClickables.length; i++) {
 
-    partnerClickables[i].addEventListener("click", function(){
-      if(window.getComputedStyle(partnerOverlays[i]).display == "none"){
+    partnerClickables[i].addEventListener("click", function() {
+      if (window.getComputedStyle(partnerOverlays[i]).display == "none") {
         showPartnerOverlay(i);
       } else {
         hidePartnerOverlay(i);
       }
     })
 
-    partnerOverlayCloseIcons[i].addEventListener("click", function(){
+    partnerOverlayCloseIcons[i].addEventListener("click", function() {
       hidePartnerOverlay(i);
     })
 
   }
 
-  function showPartnerOverlay(index){
+  function showPartnerOverlay(index) {
     partnerOverlays[index].style.display = "flex";
     gsap.to(partnerOverlays[index], {
       opacity: 1,
@@ -312,12 +463,12 @@ function ready() {
     body.style.overflow = "hidden";
   }
 
-  function hidePartnerOverlay(index){
+  function hidePartnerOverlay(index) {
     gsap.to(partnerOverlays[index], {
       opacity: 0,
       duration: 0.5
     });
-    setTimeout(function(){
+    setTimeout(function() {
       partnerOverlays[index].style.display = "none";
       body.style.overflow = "auto";
     }, 500);

@@ -41,7 +41,7 @@ function ready() {
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: 'assets/lotties/approach.json'
+    path: 'assets/lotties/approach-white.json'
   });
 
   //for the 4 steps

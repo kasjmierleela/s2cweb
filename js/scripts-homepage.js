@@ -44,6 +44,16 @@ function ready() {
     path: 'assets/lotties/approach-white.json'
   });
 
+
+  //js custom cursor
+  // const cursor = document.querySelector('.cursor');
+  //
+  // document.addEventListener('mousemove', e => {
+  //   cursor.setAttribute("style", "top: " + (e.pageY - 36) + "px; left: " + (e.pageX - 72) + "px;")
+  // })
+
+
+
   //for the 4 steps
   const stepSerials = document.querySelectorAll(".approach-step__serial");
   const stepTitles = document.querySelectorAll(".approach-step__title");
@@ -70,39 +80,39 @@ function ready() {
         setTimeout(function() {
           showApproachStep(clickCount);
           clickCount++;
-        }, staggerTime*4*1000);
+        }, staggerTime * 4 * 1000);
         break;
       case 1:
         approachLottiePlayer.playSegments([32, 62], true);
-        hideApproachStep(clickCount-1);
+        hideApproachStep(clickCount - 1);
         setTimeout(function() {
           showApproachStep(clickCount);
           clickCount++;
-        }, staggerTime*5*1000);
+        }, staggerTime * 5 * 1000);
         break;
       case 2:
         approachLottiePlayer.playSegments([62, 87], true);
-        hideApproachStep(clickCount-1);
+        hideApproachStep(clickCount - 1);
         setTimeout(function() {
           showApproachStep(clickCount);
           clickCount++;
-        }, staggerTime*5*1000);
+        }, staggerTime * 5 * 1000);
         break;
       case 3:
         approachLottiePlayer.playSegments([87, 112], true);
-        hideApproachStep(clickCount-1);
+        hideApproachStep(clickCount - 1);
         setTimeout(function() {
           showApproachStep(clickCount);
           clickCount++;
-        }, staggerTime*5*1000);
+        }, staggerTime * 5 * 1000);
         break;
       case 4:
         approachLottiePlayer.playSegments([112, 149], true);
-        hideApproachStep(clickCount-1);
+        hideApproachStep(clickCount - 1);
         setTimeout(function() {
           showIndexStep();
           clickCount = 0;
-        }, staggerTime*5*1000);
+        }, staggerTime * 5 * 1000);
         break;
       default:
     }
@@ -120,7 +130,7 @@ function ready() {
         opacity: 0,
         duration: 0.01
       });
-    }, staggerTime*4*1000);
+    }, staggerTime * 4 * 1000);
   }
 
   function showIndexStep() {
@@ -161,13 +171,13 @@ function ready() {
         opacity: 0,
         duration: 0.01
       });
-    }, staggerTime*5*1000);
+    }, staggerTime * 5 * 1000);
   }
 
   function showApproachStep(stepNumber) {
     gsap.to(approachStepParents[stepNumber], {
       opacity: 1,
-      duration: staggerTime*2
+      duration: staggerTime * 2
     });
     const timelineShowStep = gsap.timeline({
       defaults: {

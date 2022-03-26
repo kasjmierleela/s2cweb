@@ -196,13 +196,13 @@ p, h1, h2, h3, h4, h5, h6 {
 /* v1 */
 .home-hero {
   position: relative;
-  margin-top: 9.5em;
+  margin-top: 6.5em;
   margin-bottom: var(--section-margin);
 }
 
 .home-hero__image-wrapper {
   overflow: hidden;
-  height: 44em;
+  /* height: 44em; */
   width: 100%;
   margin: 0 auto;
   object-fit: cover;
@@ -220,7 +220,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .home-hero__pitch-wrapper {
   position: absolute;
   z-index: 5;
-  top: -15.5%;
+  top: -8.5%;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -410,7 +410,7 @@ p, h1, h2, h3, h4, h5, h6 {
 /* grey bg */
 .yellow-bg {
   background: var(--yellow);
-  background: #EAB34530;
+  background: #EAB34540;
   padding: calc(var(--section-margin)*1.2) 0;
 }
 
@@ -1297,7 +1297,37 @@ ul, li {
 .about-acc__body {
   overflow: hidden;
   height: 0;
+  position: relative;
 }
+
+.about-acc__graphic-wrapper-1{
+  width: 36em;
+  position: absolute;
+  top: 2.2em;
+  left: 0%;
+}
+
+.about-acc__graphic-wrapper-2{
+  width: 26em;
+  position: absolute;
+  top: 40em;
+  right: 4%;
+}
+
+.about-acc__graphic-wrapper-3{
+  width: 42em;
+  position: absolute;
+  top: 66em;
+  left: 1%;
+}
+
+.about-acc__graphic{
+  width: 100%;
+  mix-blend-mode: multiply;
+}
+
+
+
 
 /* princples */
 .principles {

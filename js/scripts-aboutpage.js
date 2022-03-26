@@ -45,6 +45,42 @@ function ready() {
     });
 
 
+    //handle accordion parallax
+    gsap.to(".about-acc__graphic-wrapper-1", {
+      yPercent: 20,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".about-acc__graphic-wrapper-2",
+        start: "top bottom", // the default values
+        end: "bottom center",
+        scrub: true
+      },
+    });
+
+    gsap.to(".about-acc__graphic-wrapper-2", {
+      yPercent: -10,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".about-acc__graphic-wrapper-3",
+        start: "top bottom", // the default values
+        end: "bottom center",
+        scrub: true
+      },
+    });
+
+    gsap.to(".about-acc__graphic-wrapper-3", {
+      yPercent: -20,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".about-acc__graphic-wrapper-2",
+        start: "top top", // the default values
+        end: "top top-=100%",
+        scrub: true
+      },
+    });
+
+    
+
     //handle principles accordions
     const principlesAccHeads = document.querySelectorAll(".principles-acc__head");
     const principlesAccBodys = document.querySelectorAll(".principles-acc__body");

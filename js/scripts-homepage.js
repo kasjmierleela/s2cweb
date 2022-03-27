@@ -527,7 +527,6 @@ function ready() {
   const partnerOverlays = document.querySelectorAll(".partner-grid-item__overlay-parent");
   const partnerOverlayCloseIcons = document.querySelectorAll(".partners-grid-item__overlay");
   const body = document.querySelector("body");
-  console.log(body);
 
   for (let i = 0; i < partnerClickables.length; i++) {
 

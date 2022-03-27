@@ -5,7 +5,7 @@
   --blue: #2B6282;
   --smoke: #F8F8F8;
   --black: #000000;
-  --hero-margin: 20em;
+  --hero-margin: 17em;
   --section-margin-internal: 1.5em;
   --section-margin: 6em;
   --section-margin-big: 10em;
@@ -144,7 +144,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* nav */
 .nav {
-  padding: 2.5em 0;
+  padding: 2em 0;
   margin: 0 4%;
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
@@ -160,12 +160,12 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 94%;
+  width: 96%;
   margin: 0 auto;
 }
 
 .nav-logo-wrapper {
-  width: 14em;
+  width: 12em;
 }
 
 .nav-links-wrapper,
@@ -502,7 +502,10 @@ p, h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: 0.8fr 1fr;
   grid-column-gap: 3em;
-  cursor: url(assets/images/click-cursor.png), pointer;
+  /* cursor: url('https://assets.digitalocean.com/labs/doicons/general-purpose-droplet.svg?cb=1'), url('https://assets.digitalocean.com/labs/doicons/general-purpose-droplet.svg?cb=1'), move; */
+  /* cursor: url('https://github.com/kasjmierleela/s2cweb/blob/main/assets/images/click-cursor.png'), pointer; */
+  cursor: url('assets/images/clickButton.svg'), pointer;
+
 }
 
 /* .cursor {

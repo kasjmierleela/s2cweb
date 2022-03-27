@@ -31,6 +31,44 @@ function ready() {
     }
   });
 
+  const toggleBall1 = document.querySelector(".story-grid-item__bg-item1");
+  const toggleBall2 = document.querySelector(".story-grid-item__bg-item2");
+  const toggleBall3 = document.querySelector(".story-grid-item__bg-item3");
+  const toggleBallsTrigger = document.querySelector(".story-grid-item__right");
+
+  toggleBallsTrigger.addEventListener("mouseenter", function(){
+    gsap.to(toggleBall1, {
+      width: "18em",
+      height: "18em"
+    });
+    gsap.to(toggleBall2, {
+      width: "8em",
+      height: "8em"
+    });
+    gsap.to(toggleBall3, {
+      width: "28em",
+      height: "28em"
+    });
+  });
+
+  toggleBallsTrigger.addEventListener("mouseleave", function(){
+    gsap.to(toggleBall1, {
+      width: "16em",
+      height: "16em"
+    });
+    gsap.to(toggleBall2, {
+      width: "6em",
+      height: "6em"
+    });
+    gsap.to(toggleBall3, {
+      width: "26em",
+      height: "26em"
+    });
+  });
+
+
+
+
 
 
   //handle approach section interaction
@@ -41,7 +79,7 @@ function ready() {
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: 'assets/lotties/approach-white.json'
+    path: 'assets/lotties/approach.json'
   });
 
 
@@ -202,6 +240,24 @@ function ready() {
   }
 
 
+  // approach buttons
+  const approachButtons = document.querySelectorAll(".approach-add__button");
+  const approachButtonOverlays = document.querySelectorAll(".approach-add__button-overlay");
+
+  for(let i=0; i<approachButtons.length; i++){
+    approachButtons[i].addEventListener("mouseenter", function(){
+      gsap.to(approachButtonOverlays[i], {
+        left: "0%",
+        duration: 0.3
+      });
+    })
+    approachButtons[i].addEventListener("mouseleave", function(){
+      gsap.to(approachButtonOverlays[i], {
+        left: "-100%",
+        duration: 0.3
+      });
+    })
+  }
 
 
 
@@ -469,7 +525,7 @@ function ready() {
   //handle partner collaborator popups
   const partnerClickables = document.querySelectorAll(".partners-grid__item-clickable");
   const partnerOverlays = document.querySelectorAll(".partner-grid-item__overlay-parent");
-  const partnerOverlayCloseIcons = document.querySelectorAll(".partners-grid-item__overlay-icon-wrapper");
+  const partnerOverlayCloseIcons = document.querySelectorAll(".partners-grid-item__overlay");
   const body = document.querySelector("body");
   console.log(body);
 

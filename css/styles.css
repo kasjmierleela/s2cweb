@@ -503,17 +503,11 @@ p, h1, h2, h3, h4, h5, h6 {
   grid-template-columns: 0.8fr 1fr;
   grid-column-gap: 3em;
   /* cursor: url('https://assets.digitalocean.com/labs/doicons/general-purpose-droplet.svg?cb=1'), url('https://assets.digitalocean.com/labs/doicons/general-purpose-droplet.svg?cb=1'), move; */
-  /* cursor: url('https://github.com/kasjmierleela/s2cweb/blob/main/assets/images/click-cursor.png'), pointer; */
+  /* cursor: url('https://github.com/kasjmierleela/s2cweb/blob/main/assets/images/clickButton.svg?cb=1'), pointer; */
   cursor: url('assets/images/clickButton.svg'), pointer;
 
 }
 
-/* .cursor {
-  width: 10em;
-  position: absolute;
-  pointer-events: none;
-  z-index: 1000;
-} */
 .approach-left {
   display: flex;
   flex-direction: column;
@@ -1266,7 +1260,7 @@ ul, li {
 /* hero banner */
 .hero-banner {
   position: relative;
-  margin-top: calc(var(--hero-margin)*0.62);
+  margin-top: calc(var(--hero-margin)*0.68);
   margin-bottom: var(--section-margin);
 }
 
@@ -1403,12 +1397,12 @@ ul, li {
   border-radius: 1em;
   margin-bottom: 1.5em;
   transform: scale(1);
-  transition: transform 0.3s ease-out;
+  transition: box-shadow 0.3s ease-out;
 }
 
 .principles-acc__item:hover,
 .principles-acc__item:focus {
-  transform: scale(0.97);
+box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 
 .principles-acc__head {

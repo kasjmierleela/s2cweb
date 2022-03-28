@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", ready);
+document.addEventListener("DOMContentLoaded", readyAllPages);
 
 
-function ready() {
+function readyAllPages() {
 
 
   // handle nav scroll react
@@ -14,7 +14,7 @@ function ready() {
   }).progress(1);
 
   ScrollTrigger.create({
-    start: "top top+=200",
+    start: "top top+=100",
     end: 99999,
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()

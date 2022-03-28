@@ -4,6 +4,75 @@ document.addEventListener("DOMContentLoaded", ready);
 function ready() {
 
 
+  //home hero lottie parallax
+  gsap.registerPlugin(ScrollTrigger);
+
+  const heroBannerWrapper = document.querySelector(".home-hero__banner-wrappe");
+  const heroPeople = document.querySelector(".home-hero__people-wrapper");
+  const heroShape1 = document.querySelector(".home-hero__shape-wrapper-1");
+  const heroShape2 = document.querySelector(".home-hero__shape-wrapper-2");
+  const heroShape3 = document.querySelector(".home-hero__shape-wrapper-3");
+  const heroShape4 = document.querySelector(".home-hero__shape-wrapper-4");
+
+  gsap.to(heroPeople, {
+    yPercent: 20,
+    ease: "none",
+    scrollTrigger: {
+      trigger: heroBannerWrapper,
+      start: "top center", // the default values
+      end: "bottom center",
+      scrub: true
+    },
+  });
+
+  gsap.to(heroShape1, {
+    yPercent: 120,
+    ease: "none",
+    scrollTrigger: {
+      trigger: heroBannerWrapper,
+      start: "top center", // the default values
+      end: "bottom center",
+      scrub: true
+    },
+  });
+
+  gsap.to(heroShape2, {
+    yPercent: -60,
+    ease: "none",
+    scrollTrigger: {
+      trigger: heroBannerWrapper,
+      start: "top center", // the default values
+      end: "bottom center",
+      scrub: true
+    },
+  });
+
+  gsap.to(heroShape3, {
+    yPercent: -20,
+    ease: "none",
+    scrollTrigger: {
+      trigger: heroBannerWrapper,
+      start: "top center", // the default values
+      end: "bottom center",
+      scrub: true
+    },
+  });
+
+  gsap.to(heroShape4, {
+    yPercent: 280,
+    ease: "none",
+    scrollTrigger: {
+      trigger: heroBannerWrapper,
+      start: "top bottom", // the default values
+      end: "bottom center",
+      scrub: true
+    },
+  });
+
+
+
+
+
   //handle muhammad story cards
   const storyToggle = document.querySelector(".story-toggle-area");
   const storyToggleBall = document.querySelector(".story-toggle-ball");

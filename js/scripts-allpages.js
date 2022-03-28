@@ -14,7 +14,7 @@ function ready() {
   }).progress(1);
 
   ScrollTrigger.create({
-    start: "top top",
+    start: "top top+=200",
     end: 99999,
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
@@ -29,13 +29,15 @@ function ready() {
     scrollTrigger: {
       trigger: ".footer",
       pin: false,
-      start: "top bottom-=200",
+      start: "top bottom",
       end: "bottom bottom",
       scrub: true
     }
   });
 
   footerTimeline.to(footerGIB, {
-    right: "0%"
+    right: "0.01%",
+    duration: 0.5
   });
+
 }

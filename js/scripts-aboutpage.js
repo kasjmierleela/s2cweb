@@ -79,7 +79,7 @@ function ready() {
       },
     });
 
-    
+
 
     //handle principles accordions
     const principlesAccHeads = document.querySelectorAll(".principles-acc__head");

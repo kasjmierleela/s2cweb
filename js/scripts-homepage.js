@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", ready);
 
-
 function ready() {
 
 
   //home hero lottie parallax
   gsap.registerPlugin(ScrollTrigger);
-
-  const heroBannerWrapper = document.querySelector(".home-hero__banner-wrappe");
+  
+  const heroBannerWrapper = document.querySelector(".home-hero__banner-wrapper");
   const heroPeople = document.querySelector(".home-hero__people-wrapper");
   const heroShape1 = document.querySelector(".home-hero__shape-wrapper-1");
   const heroShape2 = document.querySelector(".home-hero__shape-wrapper-2");

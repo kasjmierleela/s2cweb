@@ -1226,7 +1226,6 @@ ul, li {
 }
 
 .cta-item__image-wrapper {
-  mix-blend-mode: multiply;
   width: 25em;
   display: flex;
   align-items: center;

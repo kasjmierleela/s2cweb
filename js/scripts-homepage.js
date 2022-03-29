@@ -1,11 +1,11 @@
-document.addEventListener("DOMContentLoaded", ready);
+window.addEventListener("DOMContentLoaded", ready);
 
 function ready() {
 
 
   //home hero lottie parallax
   gsap.registerPlugin(ScrollTrigger);
-  
+
   const heroBannerWrapper = document.querySelector(".home-hero__banner-wrapper");
   const heroPeople = document.querySelector(".home-hero__people-wrapper");
   const heroShape1 = document.querySelector(".home-hero__shape-wrapper-1");
@@ -308,26 +308,6 @@ function ready() {
   }
 
 
-  // approach buttons
-  const approachButtons = document.querySelectorAll(".approach-add__button");
-  const approachButtonOverlays = document.querySelectorAll(".approach-add__button-overlay");
-
-  for(let i=0; i<approachButtons.length; i++){
-    approachButtons[i].addEventListener("mouseenter", function(){
-      gsap.to(approachButtonOverlays[i], {
-        left: "0%",
-        duration: 0.3
-      });
-    })
-    approachButtons[i].addEventListener("mouseleave", function(){
-      gsap.to(approachButtonOverlays[i], {
-        left: "-100%",
-        duration: 0.3
-      });
-    })
-  }
-
-
 
 
 
@@ -409,15 +389,14 @@ function ready() {
     ease: "power1.inOut"
   })));
 
-  // document.querySelector(".toggle").addEventListener("click", () => wrapper.classList.toggle("show-overflow"));
-  // document.querySelector(".next").addEventListener("click", () => loop.next({
-  //   duration: 0.4,
-  //   ease: "power1.inOut"
-  // }));
-  // document.querySelector(".prev").addEventListener("click", () => loop.previous({
-  //   duration: 0.4,
-  //   ease: "power1.inOut"
-  // }));
+  document.querySelector(".spotlight-next__icon-wrapper").addEventListener("click", () => loop.next({
+    duration: 0.4,
+    ease: "power1.inOut"
+  }));
+  document.querySelector(".spotlight-prev__icon-wrapper").addEventListener("click", () => loop.previous({
+    duration: 0.4,
+    ease: "power1.inOut"
+  }));
 
 
 

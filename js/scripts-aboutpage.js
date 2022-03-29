@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", ready);
+window.addEventListener("DOMContentLoaded", ready);
 
 
 function ready() {

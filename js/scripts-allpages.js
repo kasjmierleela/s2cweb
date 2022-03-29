@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", readyAllPages);
+window.addEventListener("DOMContentLoaded", readyAllPages);
 
 
 function readyAllPages() {
@@ -14,7 +14,7 @@ function readyAllPages() {
   }).progress(1);
 
   ScrollTrigger.create({
-    start: "top top+=100",
+    start: "top top+=70",
     end: 99999,
     onUpdate: (self) => {
       self.direction === -1 ? showAnim.play() : showAnim.reverse()
@@ -39,5 +39,26 @@ function readyAllPages() {
     right: "0.01%",
     duration: 0.5
   });
+
+
+
+  //handle buttons
+  const pageButtons = document.querySelectorAll(".button");
+  const pageButtonOverlays = document.querySelectorAll(".button-overlay");
+
+  for(let i=0; i<pageButtons.length; i++){
+    pageButtons[i].addEventListener("mouseenter", function(){
+      gsap.to(pageButtonOverlays[i], {
+        left: "0%",
+        duration: 0.3
+      });
+    })
+    pageButtons[i].addEventListener("mouseleave", function(){
+      gsap.to(pageButtonOverlays[i], {
+        left: "-100%",
+        duration: 0.3
+      });
+    })
+  }
 
 }
